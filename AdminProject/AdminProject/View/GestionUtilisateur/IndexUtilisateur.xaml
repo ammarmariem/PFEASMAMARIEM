@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="AdminProject.View.GestionUtilisateur.IndexUtilisateur"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AdminProject.View.GestionUtilisateur"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Pivot>
+            <PivotItem Header="Gestion des utilisateurs">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="391*"/>
+                        <ColumnDefinition Width="225*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ListView Name="listev">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <TextBlock Name="txt1" Text="{Binding nom}"/>
+                                        <TextBlock Name="txt2" Text="{Binding prenom}"/>
+                                        <TextBlock Name="txt3" Text="{Binding email}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <StackPanel>
+                            <TextBox Name="txtnom" PlaceholderText="nom" Margin="10" LostFocus="txtnom_LostFocus"/>
+                            <TextBox Name="txtprenom" PlaceholderText="prenom" Margin="10" LostFocus="txtprenom_LostFocus"/>
+                            <TextBox Name="txtemail" PlaceholderText="email" Margin="10" LostFocus="txtemail_LostFocus"/>
+                            <PasswordBox Name="txtmotdepasse" PlaceholderText="motdepasse" Margin="10" LostFocus="txtmotdepasse_LostFocus"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton Name="btnhome" Icon="Home" Label="Accueil"/>
+                    <AppBarSeparator/>
+                    <TextBox Name="txtrech" PlaceholderText="rechercher" Width="250" Margin="10"/>
+                </StackPanel>
+            </CommandBar.Content>
+            <AppBarButton Name="btnajout" Icon="Add" Label="Ajouter"/>
+            <AppBarButton Name="btmodifier" Icon="Edit" Label="Modifier"/>
+            <AppBarButton Name="btnsupprimer" Icon="Delete" Label="Supprimer"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
