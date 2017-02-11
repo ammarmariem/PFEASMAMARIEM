@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="UserProject.View.GestionEvenement.MAJEvenement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UserProject.View.GestionEvenement"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <StackPanel>
+            <TextBox Name="txtnom" PlaceholderText="nom" Margin="10" LostFocus="txtnom_LostFocus_1"/>
+            <ComboBox Name="txttype" PlaceholderText="type" Margin="10" LostFocus="txttype_LostFocus"/>
+            <TextBox Name="txtdescription" PlaceholderText="description" Margin="10" Height="100" TextWrapping="Wrap" LostFocus="txtdescription_LostFocus"/>
+            <TextBox Name="txtlieu" PlaceholderText="lieu" Margin="10" LostFocus="txtlieu_LostFocus"/>
+            <Maps:MapControl x:Name="MapControl1" Margin="10" Height="120" ZoomInteractionMode="GestureAndControl" TiltInteractionMode="GestureAndControl" MapServiceToken="1VJTec4XTy1ZLcRFuDmm~Q2A3InPNSyzevnsXl0mzuw~As-J0MTg5dQrXGscj9j3-0spTadH-_DIIWCGcOLOfE-JtjivErCw3k3abMduNoEb"/>
+            <AppBarButton Name="btnnav" Icon="Map" Margin="10"/>
+            <DatePicker Name="txtdatec" Margin="10" DateChanged="txtdatec_DateChanged"/>
+            <TimePicker Name="txttemp" Margin="10"/>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox Name="txtduree" PlaceholderText="durée" Margin="10"/>
+                <ComboBox Name="txtunite" PlaceholderText="unité" Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

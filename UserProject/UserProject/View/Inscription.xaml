@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="UserProject.View.Inscription"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UserProject.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <StackPanel>
+            <TextBox Name="txtnom" PlaceholderText="nom " Margin="10" LostFocus="txtnom_LostFocus" />
+            <TextBox Name="txtprenom" PlaceholderText="prenom" Margin="10" LostFocus="txtprenom_LostFocus"/>
+            <TextBox Name="txttel" PlaceholderText="Telephone" Margin="10"  LostFocus="txttel_LostFocus"/>
+            <TextBox Name="txtcin" PlaceholderText="numéro Cate d'identité" Margin="10" LostFocus="txtcin_LostFocus"/>
+            <DatePicker Name="txtdate" Margin="10" DateChanged="txtdate_DateChanged"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="sexe:" Margin="10"/>
+                <RadioButton Content="Homme" Name="bnth" Margin="10"/>
+                <RadioButton Content="Femme" Name="btnf" Margin="10"/>
+            </StackPanel>
+            <TextBox Name="txtemail" PlaceholderText="email" Margin="10" LostFocus="txtemail_LostFocus" />
+            <PasswordBox Name="txtmp" PlaceholderText="mot de passe" Margin="10" LostFocus="txtmp_LostFocus"/>
+            <PasswordBox Name="txtcmp" PlaceholderText="Confirmer mot de passe" LostFocus="txtcmp_LostFocus"/>
+        </StackPanel>
+    </Grid>
+    <Page.BottomAppBar>
+            <CommandBar>
+            <CommandBar.Content>
+                <AppBarButton Name="btnretour" Icon="Back" Label="Retour" Click="btnretour_Click"/>
+            </CommandBar.Content>
+                <AppBarButton Name="btninscri" Icon="Save" Label="inscription" />
+                <AppBarSeparator/>
+            </CommandBar>
+        </Page.BottomAppBar>
+   
+
+    
+</Page>
